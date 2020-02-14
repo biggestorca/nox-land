@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  justify-content: flex-start;
+  align-content: stretch;
+  flex: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - #{$header-height});
+
+  .main {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    background-color: $body-bg;
+  }
+}

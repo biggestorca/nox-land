@@ -1,0 +1,32 @@
+.b-key-value {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.79;
+  
+  &__row {
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
+    
+    td:first-child{
+      vertical-align: baseline;
+      color: color("gray-chateau");
+    }
+
+    td:last-child{
+      padding-left: 40px;
+      color: color("fiord");
+    }
+  }
+  
+  &__value {
+    &--block {
+      div {
+        background-color: #ebecee;
+        padding: 20px 75px 50px 20px;
+      }
+    }
+  }
+}

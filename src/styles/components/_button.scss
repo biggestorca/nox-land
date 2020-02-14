@@ -1,0 +1,115 @@
+.b-button {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  padding: $button-padding;
+  vertical-align: middle;
+  z-index: 1;
+  user-select: none;
+  border: none;
+  border-radius: $button-border-radius;
+  outline: 0;
+  cursor: pointer;
+  font-size: $button-font-size;
+  font-weight: $button-font-weight;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: all $base-transition;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  text-decoration: none !important;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    background-color: transparentize(#ffffff, 0.84);
+    transition: opacity $base-transition;
+  }
+
+  &:hover:not(.b-button--bordered) {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &--disabled {
+    pointer-events: none;
+  }
+
+  &--small {
+    line-height: 27px;
+    padding: 0 30px;
+  }
+  &--medium {
+    line-height: 34px;
+    padding: 0 40px;
+  }
+
+  &--big {
+    line-height: 64px;
+  }
+
+  &--fullwidth {
+    display: block;
+    width: 100%;
+  }
+  
+  
+  &--orange {
+    background: color("golden-tainoi");
+    color: $black;
+  }
+  
+  &--blue {
+    background: color("boston-blue");
+    color: $white;
+  }
+  &--green {
+    background: color("pastel-green");
+    color: $white;
+  }
+  &--dark {
+    background: color("fiord");
+    color: $white;
+  }
+  
+  &--bordered {
+    border: 1px solid color("boston-blue");
+    background-color: $white;
+    color: color("boston-blue");
+    
+    &:hover {
+      background: color("boston-blue");
+      color: $white;
+    }
+  }
+
+  &--link {
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    text-align: left;
+    text-transform: none;
+    white-space: nowrap;
+    color: color("boston-blue");
+    
+    &:hover {
+      color: color("pickled-bluewood");
+    }
+  }
+}

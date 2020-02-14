@@ -1,0 +1,18 @@
+// stylelint-disable declaration-no-important
+
+//
+// Utilities for common `position` values
+//
+
+@each $value in $positions {
+  .l-pos-#{$value} {
+    position: $value !important;
+    z-index: 1;
+  }
+}
+
+@each $value in $fixed-values {
+  .l-fix-#{$value} {
+    #{$value}: 0 !important;
+  }
+}

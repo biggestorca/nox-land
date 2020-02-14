@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 80px;
+    background: $header-bg;
+    height: $header-height;
+    color: $white;
+  
+    &__logo {
+      width: 196px;
+      height: 51px;
+    }
+  }
+  

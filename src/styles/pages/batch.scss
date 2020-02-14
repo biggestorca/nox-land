@@ -1,0 +1,64 @@
+@import "../variables";
+@import "../functions";
+
+.b-batch {
+  display: flex;
+  min-height: 100%;
+  padding: 0;
+  
+  &__sidebar {
+    flex: 0 0 297px;
+    width: 297px;
+    padding: 40px 0;
+    background-color: color("athens-gray");
+
+    &-button-wrapper {
+      background-color: #ebecee;
+    }
+    
+    .page__title {
+      font-size: 2.1rem;
+    }
+    .b-button {
+      padding: 0 18px;
+    }
+  }
+  
+  &__nav {
+    &-item {}
+    &-item.active &-link {
+      color: color("pickled-bluewood");
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding-left: 44px;
+      position: relative;
+      color: color("gray-chateau");
+      height: 50px;
+      text-decoration: none !important;
+      transition: $base-transition;
+      cursor: pointer;
+      
+      &:hover {
+        color: color("pickled-bluewood");
+      }
+    }
+  }
+  
+  &__content {
+    width: calc(100% - 297px);
+  }
+  
+  &__settings-button {
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    border: none;
+    
+    svg {
+      height: 17px;
+    }
+  }
+}

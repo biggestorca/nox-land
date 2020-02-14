@@ -1,0 +1,70 @@
+@import "../variables";
+@import "../functions";
+
+.datepicker {
+  box-sizing: border-box;
+  width: 260px;
+  border-color: color("gray-chateau");
+  border-bottom: none;
+  border-radius: 0;
+  
+  &--nav{
+    &-action{
+      path{
+        stroke: $black; 
+      } 
+    }
+    &-title {
+      color: $black;
+      i {
+        color: $black;
+      }
+    }
+  }
+  
+  &--day-name {
+    color: color("river-bed");
+  }
+
+  &--content {
+    padding: 0;
+  }
+  
+  &--cell {
+    height: 22px;
+    border-radius: 0;
+    border-bottom: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    
+    &:nth-child(7n) {
+      border-right: none;
+    }
+    
+    &.-current- {
+      color: color("boston-blue");
+    }
+
+    &.-selected-, 
+    &.-selected-.-current- {
+      background: color("boston-blue");
+      color: $white;
+      
+      &:hover {
+        background: color("rock-blue");
+      }
+    }
+
+    &.-disabled-,
+    &.-disabled-.-other-month-,
+    &.-disabled-.-other-month-.-focus- {
+      opacity: 0.5;
+      background-color: color("gray-chateau");
+      color: $black;
+      
+      &:hover {
+        color: $black !important;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

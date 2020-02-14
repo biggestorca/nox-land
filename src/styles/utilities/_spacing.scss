@@ -1,0 +1,73 @@
+$prefix: prefix("layout");
+
+// Margin and Padding
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $spacers {
+    .#{$prefix}-#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    .#{$prefix}-#{$abbrev}t-#{$size},
+    .#{$prefix}-#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    .#{$prefix}-#{$abbrev}r-#{$size},
+    .#{$prefix}-#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    .#{$prefix}-#{$abbrev}b-#{$size},
+    .#{$prefix}-#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    .#{$prefix}-#{$abbrev}l-#{$size},
+    .#{$prefix}-#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+}
+
+// Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+@each $size, $length in $spacers {
+  @if $size != 0 {
+    .#{$prefix}-m-n#{$size} {
+      margin: -$length !important;
+    }
+    .#{$prefix}-mt-n#{$size},
+    .#{$prefix}-my-n#{$size} {
+      margin-top: -$length !important;
+    }
+    .#{$prefix}-mr-n#{$size},
+    .#{$prefix}-mx-n#{$size} {
+      margin-right: -$length !important;
+    }
+    .#{$prefix}-mb-n#{$size},
+    .#{$prefix}-my-n#{$size} {
+      margin-bottom: -$length !important;
+    }
+    .#{$prefix}-ml-n#{$size},
+    .#{$prefix}-mx-n#{$size} {
+      margin-left: -$length !important;
+    }
+  }
+}
+
+// Some special margin utils
+.#{$prefix}-m-auto {
+  margin: auto !important;
+}
+.#{$prefix}-mt-auto,
+.#{$prefix}-my-auto {
+  margin-top: auto !important;
+}
+.#{$prefix}-mr-auto,
+.#{$prefix}-mx-auto {
+  margin-right: auto !important;
+}
+.#{$prefix}-mb-auto,
+.#{$prefix}-my-auto {
+  margin-bottom: auto !important;
+}
+.#{$prefix}-ml-auto,
+.#{$prefix}-mx-auto {
+  margin-left: auto !important;
+}

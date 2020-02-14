@@ -1,0 +1,86 @@
+.timepicker {
+  &_wrap {
+    width: 260px;
+    box-shadow: none;
+    top: 35px !important;
+    border-radius: 0;
+    background-color: $white;
+    padding: 0 38px;
+    
+    .arrow_top {
+      display: none !important;
+    }
+    
+    .time,
+    .mins {
+      width: 84px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .time {
+      margin-right: 14px;
+    }
+    
+    .prev,
+    .next {
+      height: 20px;
+      width: 80px;
+      padding: 0;
+      position: relative;
+      border: none;
+      border-radius: 0;
+      background-color: transparent;
+      transition: $base-transition;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        left: calc(50% - 3.5px);
+        top: calc(50% - 3.5px);
+        width: 10px;
+        height: 7px;
+        background-image: url('/img/arrow--blue.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+      
+      &:hover {
+        &::before {
+          transform: scale(1.3);
+        }
+      }
+    }
+
+    .next {
+      &::before {
+        transform: rotate(180deg);
+      }
+      &:hover {
+        &::before {
+          transform: rotate(180deg) scale(1.3);
+        }
+      }
+    }
+    
+    .ti_tx,
+    .mi_tx {
+      padding: 0;
+      margin: 0;
+    }
+    
+    .timepicki-input {
+      width: 84px;
+      height: 37px;
+      border: solid 1px color("gray-chateau");
+      background-color: transparent;
+      border-radius: 0;
+      font-size: 18px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      color: color("pickled-bluewood");
+    }
+  }
+}

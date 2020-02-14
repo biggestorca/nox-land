@@ -1,0 +1,23 @@
+$header-height: 37px;
+
+.b-island {
+  width: 100%;
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    padding: 0 18px;
+    background-color: color('rock-blue');
+  }
+  &__title {
+    font-size: 12px;
+    line-height: $header-height;
+    text-align: left;
+    color: $white;
+    text-transform: uppercase;
+  }
+  &__content {
+    padding: 25px 0;
+  }
+}

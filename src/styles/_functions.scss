@@ -1,0 +1,23 @@
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+@function font-weight($key) {
+  @return map-get($font-weights, $key);
+}
+
+@function font-family($key) {
+  @return map-get($font-familyes, $key);
+}
+
+@function prefix($key) {
+  @return map-get($prefixes, $key);
+}
+
+@function rem($px) {
+  @return ($px / 16) +rem;
+}

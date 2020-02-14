@@ -1,0 +1,119 @@
+.b-checkbox {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+  &__native {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    opacity: 0;
+  }
+
+  &__label {
+    display: inline-block;
+    min-width: 16px;
+    margin: 0;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__text {
+    display: inline-block;
+    padding-left: 24px;
+    transition: $transition-base;
+  }
+
+  &__fake {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    margin-top: -8px;
+    background-color: transparent;
+    transition: $transition-base;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 3.5px;
+      width: 8px;
+      height: 6px;
+      margin-top: -6px;
+      border-left: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      transform: scale(0) rotate(-45deg);
+      transform-origin: center center;
+      transition: $transition-base;
+    }
+  }
+
+  &--bordered &__fake {
+    box-shadow: inset 0 0 0 1px color("pickled-bluewood");
+  }
+
+  &__native:checked ~ &__fake {
+    background-color: color("pickled-bluewood");
+
+    &:before {
+      transform: scale(1) rotate(-45deg);
+    }
+  }
+  &.disabled &__native:checked ~ &__fake {
+    background-color: color("gray-chateau");
+
+    &:before {
+      transform: scale(1) rotate(-45deg);
+    }
+  }
+  &.disabled &__fake {
+    box-shadow: inset 0 0 0 1px color("gray-chateau");
+    cursor: initial;
+  }
+
+  &__native:not(:checked) ~ &__text {
+    //color: $nepal;
+  }
+
+  &--align-top &__fake{
+    top: 0;
+    margin-top: 2px;
+  }
+
+  &--switcher &__fake {
+    width: 36px;
+    height: 17px;
+    border-radius: 5px;
+    background-color: color("gray-chateau");
+    box-shadow: none;
+    
+    &:before {
+      width: 13px;
+      height: 13px;
+      margin-top: -6.5px;
+      border-radius: 5px;
+      background-color: $white;
+      left: 2px;
+      border: none;
+      transform: none;
+      transition: $base-transition;
+    }
+  }
+  &--switcher &__text {
+    padding-left: 45px;
+  }
+  
+  &--switcher &__native:checked ~ &__fake {
+    background-color: color("fiord");
+    
+    &:before {
+      left: 21px;
+      transform: none;
+    }
+  }
+}

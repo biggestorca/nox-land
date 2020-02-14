@@ -1,0 +1,94 @@
+.b-dropdown {
+  position: relative;
+  outline: 0;
+  vertical-align: middle;
+  display: inline-block;
+  //width: 22px;
+  //height: 22px;
+  
+  @media print {
+    display: none;
+  }
+
+  &__wrapper {
+    transition: $base-transition;
+  }
+  
+  &__trigger {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: none;
+    min-width: 184px;
+    position: absolute;
+    right: -32px;
+    top: -14px;
+    background-color: #fff;
+  }
+
+  &.active &__wrapper {
+    z-index: 10;
+  }
+  &.active &__trigger {
+    position: absolute;
+    top: -11.5px;
+    z-index: 11;
+  }
+  &.active &__content {
+    box-shadow: 0 0 0 1px color("gray-chateau");
+    z-index: 10;
+  }
+  
+  &--table &__content {
+    
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      li {
+        width: 100%;
+        
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          height: 26px;
+          padding-left: 22px;
+          font-size: 12px;
+          font-weight: 300;
+          text-align: left;
+          color: color("gray-chateau");
+          text-decoration: none;
+          transition: $base-transition;
+          cursor: pointer;
+          
+          &:hover {
+            background-color: color("wild-sand");
+            color: color("boston-blue");
+          }
+        }
+      }
+    }
+  }
+
+  &--settings &__content {
+    right: -3px;
+    top: -18px;
+    
+    .b-button[type='reset'] {
+      background-color: color("rock-blue");
+      color: $white;
+    }
+    .b-checkbox {
+      color: color("gray-chateau");
+    }
+  }
+  &--settings &__trigger {
+    right: 0;
+  }
+
+}

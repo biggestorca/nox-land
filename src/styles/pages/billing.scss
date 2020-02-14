@@ -1,0 +1,10 @@
+@import "../variables";
+@import "../functions";
+
+.b-billing {
+  &__account-balance {
+    display: inline-block;
+    padding: 31px 23px 52px;
+    background-color: color("pickled-bluewood");
+  }
+}

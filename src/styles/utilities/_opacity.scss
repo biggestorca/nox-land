@@ -1,0 +1,18 @@
+//
+// Opacity
+//
+
+$prefix: prefix("layout");
+
+@for $i from 1 through 100 / $alpha-step {
+  $value: $i * $alpha-step;
+
+  .#{$prefix}-opacity-#{$value}:not([class*="#{$prefix}-bg"]):not([class*="#{$prefix}-gradient"]) {
+    opacity: $value / 100 !important;
+  }
+
+  .#{$prefix}-opacity-#{$value}[class*="#{$prefix}-bg"]:before,
+  .#{$prefix}-opacity-#{$value}[class*="#{$prefix}-gradient"]:before {
+    opacity: $value / 100 !important;
+  }
+}
