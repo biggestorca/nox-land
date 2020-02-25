@@ -15,7 +15,7 @@
     "build favicons": "gulp favicons --production",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax=scss",
     "lint:style --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix",
-    "firebase": "yarn build ; firebase deploy"
+    "firebase": "yarn build ; rm -rf .firebase ; firebase deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -27,8 +27,8 @@
     "del": "^4.1.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.2",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.1.0",
@@ -53,8 +53,8 @@
     "imagemin-pngquant": "^8.0.0",
     "imagemin-webp": "^5.0.0",
     "imagemin-zopfli": "^6.0.0",
-    "require-dir": "^1.2.0",
     "prettier": "^1.19.1",
+    "require-dir": "^1.2.0",
     "stylelint": "^10.0.1",
     "stylelint-order": "^3.0.0",
     "stylelint-selector-bem-pattern": "^2.1.0",
