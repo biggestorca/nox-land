@@ -2,72 +2,78 @@ $prefix: prefix("layout");
 
 // Margin and Padding
 
-@each $prop, $abbrev in (margin: m, padding: p) {
-  @each $size, $length in $spacers {
-    .#{$prefix}-#{$abbrev}-#{$size} {
-      #{$prop}: $length !important;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $spacers {
+        .#{$prefix}-#{$abbrev}-#{$size}#{$infix} {
+          #{$prop}: $length !important;
+        }
+        .#{$prefix}-#{$abbrev}t-#{$size}#{$infix},
+        .#{$prefix}-#{$abbrev}y-#{$size}#{$infix} {
+          #{$prop}-top: $length !important;
+        }
+        .#{$prefix}-#{$abbrev}r-#{$size}#{$infix},
+        .#{$prefix}-#{$abbrev}x-#{$size}#{$infix} {
+          #{$prop}-right: $length !important;
+        }
+        .#{$prefix}-#{$abbrev}b-#{$size}#{$infix},
+        .#{$prefix}-#{$abbrev}y-#{$size}#{$infix} {
+          #{$prop}-bottom: $length !important;
+        }
+        .#{$prefix}-#{$abbrev}l-#{$size}#{$infix},
+        .#{$prefix}-#{$abbrev}x-#{$size}#{$infix} {
+          #{$prop}-left: $length !important;
+        }
+      }
     }
-    .#{$prefix}-#{$abbrev}t-#{$size},
-    .#{$prefix}-#{$abbrev}y-#{$size} {
-      #{$prop}-top: $length !important;
+
+    // Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
+    @each $size, $length in $spacers {
+      @if $size != 0 {
+        .#{$prefix}-m-n#{$size}#{$infix} {
+          margin: -$length !important;
+        }
+        .#{$prefix}-mt-n#{$size}#{$infix},
+        .#{$prefix}-my-n#{$size}#{$infix} {
+          margin-top: -$length !important;
+        }
+        .#{$prefix}-mr-n#{$size#{$infix}},
+        .#{$prefix}-mx-n#{$size}#{$infix} {
+          margin-right: -$length !important;
+        }
+        .#{$prefix}-mb-n#{$size}#{$infix},
+        .#{$prefix}-my-n#{$size}#{$infix} {
+          margin-bottom: -$length !important;
+        }
+        .#{$prefix}-ml-n#{$size}#{$infix},
+        .#{$prefix}-mx-n#{$size}#{$infix} {
+          margin-left: -$length !important;
+        }
+      }
     }
-    .#{$prefix}-#{$abbrev}r-#{$size},
-    .#{$prefix}-#{$abbrev}x-#{$size} {
-      #{$prop}-right: $length !important;
+
+    // Some special margin utils
+    .#{$prefix}-m-auto#{$infix} {
+      margin: auto !important;
     }
-    .#{$prefix}-#{$abbrev}b-#{$size},
-    .#{$prefix}-#{$abbrev}y-#{$size} {
-      #{$prop}-bottom: $length !important;
+    .#{$prefix}-mt-auto#{$infix},
+    .#{$prefix}-my-auto#{$infix} {
+      margin-top: auto !important;
     }
-    .#{$prefix}-#{$abbrev}l-#{$size},
-    .#{$prefix}-#{$abbrev}x-#{$size} {
-      #{$prop}-left: $length !important;
+    .#{$prefix}-mr-auto#{$infix},
+    .#{$prefix}-mx-auto#{$infix} {
+      margin-right: auto !important;
+    }
+    .#{$prefix}-mb-auto#{$infix},
+    .#{$prefix}-my-auto#{$infix} {
+      margin-bottom: auto !important;
+    }
+    .#{$prefix}-ml-auto#{$infix},
+    .#{$prefix}-mx-auto#{$infix} {
+      margin-left: auto !important;
     }
   }
-}
-
-// Negative margins (e.g., where `.mb-n1` is negative version of `.mb-1`)
-@each $size, $length in $spacers {
-  @if $size != 0 {
-    .#{$prefix}-m-n#{$size} {
-      margin: -$length !important;
-    }
-    .#{$prefix}-mt-n#{$size},
-    .#{$prefix}-my-n#{$size} {
-      margin-top: -$length !important;
-    }
-    .#{$prefix}-mr-n#{$size},
-    .#{$prefix}-mx-n#{$size} {
-      margin-right: -$length !important;
-    }
-    .#{$prefix}-mb-n#{$size},
-    .#{$prefix}-my-n#{$size} {
-      margin-bottom: -$length !important;
-    }
-    .#{$prefix}-ml-n#{$size},
-    .#{$prefix}-mx-n#{$size} {
-      margin-left: -$length !important;
-    }
-  }
-}
-
-// Some special margin utils
-.#{$prefix}-m-auto {
-  margin: auto !important;
-}
-.#{$prefix}-mt-auto,
-.#{$prefix}-my-auto {
-  margin-top: auto !important;
-}
-.#{$prefix}-mr-auto,
-.#{$prefix}-mx-auto {
-  margin-right: auto !important;
-}
-.#{$prefix}-mb-auto,
-.#{$prefix}-my-auto {
-  margin-bottom: auto !important;
-}
-.#{$prefix}-ml-auto,
-.#{$prefix}-mx-auto {
-  margin-left: auto !important;
 }

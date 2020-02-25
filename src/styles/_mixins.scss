@@ -1,5 +1,8 @@
 // Used in conjunction with global variables to enable certain theme features.
 
+@import "mixins/placeholder";
+// Skins
+@import "mixins/transition";
 
 // Layout
 @import "mixins/breakpoints";
@@ -7,11 +10,7 @@
 @import "mixins/grid";
 
 // Text
-@import "mixins/text-emphasis";
 @import "mixins/text-truncate";
 
 // Utilities
-@import 'mixins/hover';
-
-// Skins
-@import "mixins/transition";
+@import "mixins/hover";

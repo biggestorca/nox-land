@@ -46,7 +46,6 @@ gulp.task("styles", () => gulp.src(paths.styles.src)
     .pipe(gulpif(production, rename({
         suffix: ".min",
     })))
-    .pipe(plumber.stop())
     .pipe(gulpif(!production, sourcemaps.write("./maps/")))
     .pipe(gulp.dest(paths.styles.dist))
     .pipe(debug({

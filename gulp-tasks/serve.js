@@ -11,7 +11,7 @@ gulp.task("serve", () => {
         notify: true,
     });
 
-    gulp.watch(paths.views.watch).on("change", browsersync.reload);
+    gulp.watch(paths.views.watch, gulp.parallel("views"));
     gulp.watch(paths.styles.watch, gulp.parallel("styles"));
     gulp.watch(paths.scripts.watch, gulp.parallel("scripts"));
     gulp.watch(paths.images.watch, gulp.parallel("images"));

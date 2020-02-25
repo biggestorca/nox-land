@@ -54,78 +54,57 @@ $prefix: prefix("layout");
 
 // Responsive
 
-// Alignment
-.#{$prefix}-text-left {
-  text-align: left !important;
-}
-.#{$prefix}-text-right {
-  text-align: right !important;
-}
-.#{$prefix}-text-center {
-  text-align: center !important;
-}
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-// Families
-@each $family, $value in $font-familyes {
-  .#{$prefix}-ff-#{$family} {
-    font-family: $value !important;
+    // Alignment
+
+    .#{$prefix}-text-left#{$infix} {
+      text-align: left !important;
+    }
+    .#{$prefix}-text-right#{$infix} {
+      text-align: right !important;
+    }
+    .#{$prefix}-text-center#{$infix} {
+      text-align: center !important;
+    }
+
+    // Sizes
+
+    @each $size, $value in $font-sizes {
+      .#{$prefix}-fs-#{$size}#{$infix} {
+        font-size: $value !important;
+      }
+    }
+
+    // Contextual colors
+
+    .#{$prefix}-text-white#{$infix} {
+      color: $white !important;
+    }
+    @each $color, $value in $colors {
+      .#{$prefix}-text-#{$color}#{$infix} {
+        color: $value;
+      }
+    }
+    .#{$prefix}-text-positive#{$infix} {
+      color: $text-positive !important;
+    }
+    .#{$prefix}-text-negative#{$infix} {
+      color: $text-negative !important;
+    }
+    .#{$prefix}-text-muted#{$infix} {
+      color: $text-muted !important;
+    }
+    .#{$prefix}-text-link#{$infix} {
+      color: $link-color !important;
+    }
+
+    // Reset
+
+    .#{$prefix}-text-reset#{$infix} {
+      color: inherit !important;
+    }
   }
-}
-
-// Sizes
-@each $size, $value in $font-sizes {
-  .#{$prefix}-fs-#{$size} {
-    font-size: $value !important;
-  }
-}
-
-// Weights
-@each $size, $value in $font-weights {
-  .#{$prefix}-fw-#{$size} {
-    font-weight: $value !important;
-  }
-}
-
-// Line heights
-@each $size, $value in $line-heights {
-  .#{$prefix}-lh-#{$size} {
-    line-height: $value !important;
-  }
-}
-
-// Contextual colors
-.#{$prefix}-text-white {
-  color: $white !important;
-}
-@each $color, $value in $colors {
-  // @include text-emphasis-variant('.#{$prefix}-text-#{$color}', $value); - uncomment if the text-color will be needed for links
-  .#{$prefix}-text-#{$color} {
-    color: $value;
-  }
-}
-
-@include text-emphasis-variant(".#{$prefix}-text-body", $body-color);
-.#{$prefix}-text-positive {
-  color: $text-positive !important;
-}
-.#{$prefix}-text-negative {
-  color: $text-negative !important;
-}
-.#{$prefix}-text-muted {
-  color: $text-muted !important;
-}
-.#{$prefix}-text-link {
-  color: $link-color !important;
-}
-
-// Table Head - needed for columns as head
-
-// .#{$prefix}-text-thead {
-//   color: $table-head-color !important;
-// }
-
-// Reset
-
-.#{$prefix}-text-reset {
-  color: inherit !important;
 }

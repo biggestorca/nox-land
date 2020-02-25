@@ -1,0 +1,30 @@
+.b-footer {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 120px;
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 32px;
+  }
+}
+
+.b-footer__bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 48px 0 24px;
+  z-index: 1100;
+  background: linear-gradient(to bottom, transparent 0%, $body-bg 100%);
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    padding: 0;
+    background: none;
+  }
+}
+
+.b-footer__text {
+  font-size: 12px;
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}

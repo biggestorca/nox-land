@@ -1,0 +1,31 @@
+.b-section--what-is-nox {
+  padding-top: 160px;
+  padding-bottom: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 714px;
+    height: 596.64px;
+    background-image: url("/img/bg/what-is-nox-bg.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+
+    @include media-breakpoint-up(md) {
+      top: 50%;
+      width: 100%;
+      height: 900px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 1381px;
+      height: 1154px;
+      opacity: 0.5;
+    }
+  }
+}

@@ -1,0 +1,140 @@
+.b-section--why-nox {
+  margin-top: -48px !important;
+  padding-top: calc(48px + 90px);
+  padding-bottom: 48px;
+  background-color: #e7e7ec;
+
+  @include media-breakpoint-up(md) {
+    margin-top: -56px !important;
+    padding-top: calc(56px + 128px);
+    padding-bottom: 86px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 400px;
+    background-image: url("/img/bg/why-nox-bottom.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-up(md) {
+      height: 450px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 105%;
+    }
+    @media screen and (min-width: 1680px) {
+      height: 550px;
+      width: 115%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 300px;
+    background-image: url("/img/bg/why-nox-bg-top-mob.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-up(md) {
+      height: 450px;
+      background-image: url("/img/bg/why-nox-bg-top-left-desk.png"),
+        url("/img/bg/why-nox-bg-top-right-desk.png");
+      background-position: top left, top right;
+      background-size: 30%, 30%;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 550px;
+      background-size: 350px 300px, 350px 550px;
+    }
+
+    @media screen and (min-width: 1680px) {
+      height: 600px;
+      background-size: 400px 350px, 400px 600px;
+    }
+  }
+
+  .b-island {
+    &.recursive {
+      &::before {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.07),
+          0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0503198),
+          0px 12.5216px 10.0172px rgba(0, 0, 0, 0.0417275),
+          0px 22.3363px 17.869px rgba(0, 0, 0, 0.035),
+          0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0282725),
+          0px 100px 80px rgba(0, 0, 0, 0.0196802);
+      }
+    }
+  }
+  .why-nox-item {
+    .recursive {
+      .b-island {
+        .b-island__inner {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          height: 246px;
+        }
+      }
+    }
+    &:nth-of-type(2) {
+      .icon {
+        width: 146px;
+        height: 140px;
+      }
+    }
+    &:nth-of-type(3) {
+      .icon {
+        width: 228px;
+      }
+    }
+    &:nth-of-type(4) {
+      .icon {
+        width: 185px;
+      }
+    }
+    &:nth-of-type(5) {
+      .icon {
+        width: 147px;
+      }
+    }
+  }
+  .why-nox__attention {
+    max-width: 825px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    letter-spacing: -0.75px;
+  }
+
+  .js-trigger-collapse {
+    .b-trigger-collapse__is-collapsed {
+      display: block;
+    }
+    .b-trigger-collapse__is-opened {
+      display: none;
+    }
+
+    &.active {
+      .b-trigger-collapse__is-collapsed {
+        display: none;
+      }
+      .b-trigger-collapse__is-opened {
+        display: block;
+      }
+    }
+  }
+}

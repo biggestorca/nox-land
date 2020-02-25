@@ -9,11 +9,7 @@ const paths = {
         watch: ["./src/views/**/*.html"],
     },
     styles: {
-        src: [
-            "./src/styles/reset.scss",
-            "./src/styles/main.{scss,sass}",
-            "./src/styles/vendor.scss",
-        ],
+        src: ["./src/styles/main.{scss,sass}", "./src/styles/vendor.scss"],
         dist: "./dist/styles/",
         watch: ["./src/styles/**/*.{scss,sass}"],
     },
@@ -42,13 +38,17 @@ const paths = {
         ],
     },
     fonts: {
-        src: "./src/fonts/**/*.{woff,woff2}",
+        src: "./src/fonts/**/*.{ttf,woff,woff2}",
         dist: "./dist/fonts/",
-        watch: "./src/fonts/**/*.{woff,woff2}",
+        watch: "./src/fonts/**/*.{ttf,woff,woff2}",
     },
     favicons: {
         src: "./src/img/favicons/*.{jpg,jpeg,png,gif}",
         dist: "./dist/img/favicons/",
+    },
+    pwa: {
+        src: "./src/pwa/*.{json,js}",
+        dist: "./dist/",
     },
 };
 
@@ -71,7 +71,7 @@ export const development = gulp.series(
 
 export const prod = gulp.series(
     "clean",
-    gulp.series(["views", "styles", "scripts", "images", "fonts", "favicons"])
+    gulp.series(["views", "styles", "scripts", "images", "fonts", "favicons", "pwa"])
 );
 
 export default development;

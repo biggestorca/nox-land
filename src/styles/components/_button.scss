@@ -12,7 +12,8 @@
   cursor: pointer;
   font-size: $button-font-size;
   font-weight: $button-font-weight;
-  line-height: 36px;
+  height: $button-height;
+  line-height: $button-height;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -20,9 +21,9 @@
   backface-visibility: hidden;
   transform: translateZ(0);
   text-decoration: none !important;
-  
+
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -58,40 +59,29 @@
   }
 
   &--big {
-    line-height: 64px;
+    height: 72px;
+    line-height: 72px;
   }
 
   &--fullwidth {
     display: block;
     width: 100%;
   }
-  
-  
-  &--orange {
-    background: color("golden-tainoi");
-    color: $black;
-  }
-  
+
   &--blue {
-    background: color("boston-blue");
+    background: color("dodger-blue");
     color: $white;
+    box-shadow: 0px 2.81661px 7.14458px rgba(8, 19, 47, 0.155009),
+      0px 7.12342px 18.0692px rgba(8, 19, 47, 0.221855);
   }
-  &--green {
-    background: color("pastel-green");
-    color: $white;
-  }
-  &--dark {
-    background: color("fiord");
-    color: $white;
-  }
-  
+
   &--bordered {
-    border: 1px solid color("boston-blue");
+    border: 1px solid color("dodger-blue");
     background-color: $white;
-    color: color("boston-blue");
-    
+    color: color("dodger-blue");
+
     &:hover {
-      background: color("boston-blue");
+      background: color("dodger-blue");
       color: $white;
     }
   }
@@ -106,10 +96,15 @@
     text-align: left;
     text-transform: none;
     white-space: nowrap;
-    color: color("boston-blue");
-    
-    &:hover {
-      color: color("pickled-bluewood");
-    }
+    color: color("dodger-blue");
+  }
+
+  &--shadowed {
+    box-shadow: 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.32),
+      0px 6.6501px 5.32008px rgba(0, 0, 0, 0.2),
+      0px 12.5216px 10.0172px rgba(0, 0, 0, 0.16),
+      0px 22.3363px 17.869px rgba(0, 0, 0, 0.14),
+      0px 41.7776px 33.4221px rgba(0, 0, 0, 0.12),
+      0px 100px 80px rgba(0, 0, 0, 0.08);
   }
 }

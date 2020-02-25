@@ -1,0 +1,35 @@
+[debug] [2020-02-25T13:18:19.535Z] ----------------------------------------------------------------------
+[debug] [2020-02-25T13:18:19.538Z] Command:       /Users/saymon/.nvm/versions/node/v10.19.0/bin/node /Users/saymon/.nvm/versions/node/v10.19.0/bin/firebase deploy
+[debug] [2020-02-25T13:18:19.538Z] CLI Version:   7.13.1
+[debug] [2020-02-25T13:18:19.538Z] Platform:      darwin
+[debug] [2020-02-25T13:18:19.538Z] Node Version:  v10.19.0
+[debug] [2020-02-25T13:18:19.539Z] Time:          Tue Feb 25 2020 15:18:19 GMT+0200 (GMT+02:00)
+[debug] [2020-02-25T13:18:19.539Z] ----------------------------------------------------------------------
+[debug] [2020-02-25T13:18:19.539Z] 
+[debug] [2020-02-25T13:18:19.552Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-25T13:18:19.553Z] > authorizing via signed-in user
+[debug] [2020-02-25T13:18:19.553Z] [iam] checking project nox-lp for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-25T13:18:19.555Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-25T13:18:19.555Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-25T13:18:19.793Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-25T13:18:19.812Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/nox-lp:testIamPermissions  
+
+[debug] [2020-02-25T13:18:20.188Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-25T13:18:20.192Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/nox-lp  
+ 
+[debug] [2020-02-25T13:18:20.596Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'nox-lp'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-02-25T13:18:20.601Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/nox-lp/versions  
+
+[debug] [2020-02-25T13:18:22.485Z] <<< HTTP RESPONSE 200
+[info] i  hosting[nox-lp]: beginning deploy...
+[info] i  hosting[nox-lp]: found 88 files in dist
+[debug] [2020-02-25T13:18:22.526Z] [hosting] hash cache [ZGlzdA] not populated
+[debug] [2020-02-25T13:18:22.904Z] [hosting] hash cache [ZGlzdA] stored for 88 files
+[debug] [2020-02-25T13:18:22.905Z] [hosting][hash queue][FINAL]
+[debug] [2020-02-25T13:18:22.905Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/nox-lp/versions/2a4f8453a80d5461:populateFiles  
+ <request body omitted>

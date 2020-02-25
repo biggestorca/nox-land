@@ -1,0 +1,93 @@
+.how-work {
+  margin-top: 170px;
+  &__text {
+    max-width: 555px;
+  }
+  &__list {
+    & > div {
+      &:nth-child(1) {
+        .how-work__icon {
+          width: 192px;
+        }
+      }
+      &:nth-child(2) {
+        .how-work__item {
+          height: 128px;
+          @include media-breakpoint-up(xl) {
+            height: initial;
+          }
+        }
+        .how-work__icon {
+          height: 40px;
+          width: 114px;
+          transform: rotate(90deg);
+          top: 40px;
+
+          @include media-breakpoint-up(xl) {
+            transform: rotate(0);
+            top: 80px;
+            left: 50px;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .how-work__icon {
+          width: 128px;
+        }
+      }
+      &:nth-child(4) {
+        .how-work__item {
+          height: 128px;
+          @include media-breakpoint-up(xl) {
+            height: initial;
+          }
+        }
+        .how-work__icon {
+          height: 40px;
+          width: 114px;
+          transform: rotate(90deg);
+          top: 40px;
+
+          @include media-breakpoint-up(xl) {
+            transform: rotate(0);
+            top: 80px;
+            right: 50px;
+          }
+        }
+      }
+      &:nth-child(5) {
+        .how-work__item {
+          height: 128px;
+
+          @include media-breakpoint-up(xl) {
+            height: initial;
+          }
+        }
+        .how-work__icon {
+          width: 192px;
+        }
+      }
+    }
+  }
+  &__item {
+    margin-bottom: 24px;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: initial;
+    }
+  }
+  &__icon {
+    position: relative;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(xl) {
+      height: 200px;
+    }
+  }
+  &__title {
+    margin-top: 34px;
+    text-align: center;
+    font-size: 24px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,56 @@
+.b-section {
+  position: relative;
+  & + & {
+    margin-top: $section-margin-bottom;
+    @include media-breakpoint-up(lg) {
+      margin-top: $section-margin-bottom-lg;
+    }
+  }
+}
+
+.b-section__wrapper {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+
+  @include media-breakpoint-up(md) {
+    padding-right: $section-wrapper-padding-x;
+    padding-left: $section-wrapper-padding-x;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    text-align: center;
+  }
+}
+
+.b-section__header {
+  position: relative;
+  z-index: 1;
+  padding: $section-header-padding;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -$section-indicator-width / 2;
+    width: $section-indicator-width;
+    height: $section-indicator-height;
+    background: $section-indicator-bg;
+    @include media-breakpoint-up(md) {
+      left: $section-wrapper-padding-x;
+      margin-left: 0;
+    }
+  }
+  &-title + &-description {
+    margin-top: 6px;
+  }
+}
+
+.b-section__content {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,71 @@
+.b-hamburger {
+  position: relative;
+  width: 288px;
+  height: 48px;
+  cursor: pointer;
+  background: color("dodger-blue");
+  border-radius: 40px;
+  transition: width 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.b-hamburger__inner {
+  opacity: 0;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -10px;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $white;
+    transition: transform 0s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+  }
+  &:before {
+    top: -6px;
+    transform: translate3d(0, 6px, 0) rotate(45deg);
+  }
+  &:after {
+    bottom: -6px;
+    transform: translate3d(0, -6px, 0) rotate(-45deg);
+  }
+}
+
+.b-hamburger__control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &-item {
+    height: 100%;
+  }
+}
+
+.b-hamburger .js-mfp-close {
+  display: none;
+}
+
+.js-open-nav-text {
+  width: 288px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 0.22s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,8 +1,24 @@
-.page {
-  padding: 50px 60px;
-  
-  &__header {}
-  &__title {
-    font-weight: 600;
-  }
+main {
+  position: relative;
+
+  overflow: hidden;
+  //   &::before {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 280px;
+  //     height: 150px;
+  //     background-image: url("/img/bg/header-bg.png");
+  //     background-position: top left;
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+
+  //     // @include media-breakpoint-up(md) {
+  //     //   height: 450px;
+  //     // }
+  //     // @media screen and (min-width: 1680px) {
+  //     //   height: 550px;
+  //     // }
+  //   }
 }

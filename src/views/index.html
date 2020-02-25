@@ -1,13 +1,750 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        @@include("src/views/partials/head.html", {"title": "Nox"})
-    </head>
-    <body>
-        <main id="app">
-            <h1>NOX initial</h1>
-        </main>
-        <script src="/js/vendor.js"></script>
-        <script src="/js/main.js"></script>
-    </body>
+  <head>
+    @@include("src/views/partials/head.html", {"title": "Nox"})
+  </head>
+  <body>
+    <main id="app">
+      @@include("src/views/partials/header.html", {"title": "Nox"})
+
+      <section class="b-section b-section--what-is-nox">
+        <div class="container">
+          <div class="b-section__content">
+            <div class="row flex-column-reverse flex-row@md align-items-center">
+              <div class="col-6@md">
+                <div class="l-text-center l-text-left@md">
+                  <h1 class="l-fs-44px l-fs-56px@lg">
+                    Что такое NOX?
+                  </h1>
+                  <p class="l-mt-32 l-fs-17px l-fs-22px@lg">
+                    Первая полностью автоматическая стратегия для торговли
+                    на рынке FOREX без использования стандартных индикаторов
+                    и общепринятых торговых идей!
+                  </p>
+                  <p class="l-mt-24 l-fs-17px l-fs-22px@lg">
+                    Стратегия торгует на рынке «выходного дня», к которому имеют
+                    доступ только крупнейшие банки. 99 % частных трейдеров
+                    не имеют возможности для извлечения прибыли на данном рынке.
+                  </p>
+                </div>
+              </div>
+              <div class="col-6@md">
+                <img
+                  src="/img/brain.png"
+                  srcset="/img/brain@2x.png 2x"
+                  alt=""
+                  class="img-fluid l-px-24"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="b-section b-section--better-than-others">
+        <div class="container">
+          <div class="b-section__header">
+            <div class="b-section__wrapper">
+              <h2
+                class="b-section__header-title l-fs-32px l-fs-44px@lg l-text-center l-text-left@lg"
+              >
+                Чем лучше других стратегий?
+              </h2>
+            </div>
+          </div>
+          <div class="b-section__content">
+            <div class="row">
+              <div class="col-4@md col@lg d-flex l-mb-16">
+                <div class="b-island">
+                  <div
+                    class="b-island__inner d-flex flex-row flex-column@md align-items-center l-pt-40"
+                  >
+                    <div class="b-island__icon">
+                      <div class="icon icon--fill l-mx-auto l-text-dodger-blue">
+                        @@include("src/img/svg/trading-with-bank.svg")
+                      </div>
+                    </div>
+                    <div
+                      class="b-island__content l-fs-21px l-text-center@md l-ml-16 l-ml-0@md l-mt-32@md"
+                    >
+                      Торговля наравне с банками
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4@md col@lg d-flex l-mb-16">
+                <div class="b-island">
+                  <div
+                    class="b-island__inner d-flex flex-row flex-column@md align-items-center l-pt-40"
+                  >
+                    <div class="b-island__icon">
+                      <div class="icon icon--fill l-mx-auto l-text-dodger-blue">
+                        @@include("src/img/svg/brain-dotted.svg")
+                      </div>
+                    </div>
+                    <div
+                      class="b-island__content l-fs-21px l-text-center@md l-ml-16 l-ml-0@md l-mt-32@md"
+                    >
+                      Точный торговый алгоритм
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4@md col@lg d-flex l-mb-16">
+                <div class="b-island">
+                  <div
+                    class="b-island__inner d-flex flex-row flex-column@md align-items-center l-pt-40"
+                  >
+                    <div class="b-island__icon">
+                      <div class="icon icon--fill l-mx-auto l-text-dodger-blue">
+                        @@include("src/img/svg/transistor.svg")
+                      </div>
+                    </div>
+                    <div
+                      class="b-island__content l-fs-21px l-text-center@md l-ml-16 l-ml-0@md l-mt-32@md"
+                    >
+                      Полностью автоматическая стратегия
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6@md col@lg d-flex l-mb-16">
+                <div class="b-island">
+                  <div
+                    class="b-island__inner d-flex flex-row flex-column@md align-items-center l-pt-40"
+                  >
+                    <div class="b-island__icon">
+                      <div class="icon icon--fill l-mx-auto l-text-dodger-blue">
+                        @@include("src/img/svg/interactive-widgets.svg")
+                      </div>
+                    </div>
+                    <div
+                      class="b-island__content l-fs-21px l-text-center@md l-ml-16 l-ml-0@md l-mt-32@md"
+                    >
+                      Простота управления
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6@md col@lg d-flex l-mb-16">
+                <div class="b-island">
+                  <div
+                    class="b-island__inner d-flex flex-row flex-column@md align-items-center l-pt-40"
+                  >
+                    <div class="b-island__icon">
+                      <div class="icon icon--fill l-mx-auto l-text-dodger-blue">
+                        @@include("src/img/svg/features-of-investing.svg")
+                      </div>
+                    </div>
+                    <div
+                      class="b-island__content l-fs-21px l-text-center@md l-ml-16 l-ml-0@md l-mt-32@md"
+                    >
+                      Высокая прибыль
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="never-think">
+          <div class="container">
+            <div class="b-section__header">
+              <div class="b-section__wrapper">
+                <div
+                  class="d-flex flex-column-reverse flex-row-reverse@md flex-row@lg align-items-center@md justify-content-between@md"
+                >
+                  <img
+                    src="/img/svg/never-think-logo.svg"
+                    alt=""
+                    class="l-w-200px l-w-300px@lg l-mx-auto l-mx-0@md"
+                  />
+                  <div
+                    class="b-section__header-title l-mb-16 l-mb-0@md l-fs-22px l-fs-34px@md l-text-center l-text-left@md l-text-right@lg"
+                  >
+                    Разработано совместно c
+                    <span class="d-none d-inline@lg">&nbsp;NeverThink</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="b-section__content">
+              <div class="row">
+                <div class="col-4@xl d-flex">
+                  <div class="l-w-100%">
+                    <div class="b-island l-h-128px@xl">
+                      <div
+                        class="b-island__inner l-h-100% d-flex flex-row align-items-center"
+                      >
+                        <div class="b-island__icon">
+                          <div
+                            class="icon icon--fill l-mx-auto l-text-dodger-blue"
+                          >
+                            @@include("src/img/svg/pro-trader.svg")
+                          </div>
+                        </div>
+                        <div
+                          class="b-island__content l-fs-21px l-ml-16 l-ml-24@lg"
+                        >
+                          Профессиональ<span class="carryover">-</span
+                          ><br class="carryover" />ный уровень разработки
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="b-island l-h-128px@xl l-mt-16 l-mt-24@xl">
+                      <div
+                        class="b-island__inner l-h-100% d-flex flex-row align-items-center"
+                      >
+                        <div class="b-island__icon">
+                          <div
+                            class="icon icon--fill l-mx-auto l-text-dodger-blue"
+                          >
+                            @@include("src/img/svg/pro-traders.svg")
+                          </div>
+                        </div>
+                        <div
+                          class="b-island__content l-fs-21px l-ml-16 l-ml-24@lg"
+                        >
+                          Бэктест с 1999 года
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4@xl d-flex l-mt-16 l-mt-0@xl l-px-12@xl">
+                  <div class="b-island">
+                    <div class="b-island__inner l-h-100%">
+                      <div
+                        class="b-island__content d-flex align-items-center justify-content-center l-h-100% l-fs-24px l-text-center"
+                      >
+                        Стратегия не основана на стандартном анализе рынков.
+                        <br class="d-none d-block@md" />
+                        Используется технический арбитраж
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4@xl d-flex">
+                  <div class="l-w-100%">
+                    <div class="b-island l-h-128px@xl l-mt-16 l-mt-0@xl">
+                      <div
+                        class="b-island__inner l-h-100% d-flex flex-row align-items-center"
+                      >
+                        <div class="b-island__icon">
+                          <div
+                            class="icon icon--fill l-mx-auto l-text-dodger-blue"
+                          >
+                            @@include("src/img/svg/opened-conditions.svg")
+                          </div>
+                        </div>
+                        <div
+                          class="b-island__content l-fs-21px l-ml-16 l-ml-24@lg"
+                        >
+                          Подтвержденная торговля с 2017 года
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="b-island dissmiss l-h-128px@xl l-mt-16 l-mt-24@xl"
+                    >
+                      <div
+                        class="b-island__inner l-h-100% d-flex flex-row align-items-center"
+                      >
+                        <div class="b-island__icon">
+                          <div
+                            class="icon icon--fill l-mx-auto l-text-dodger-blue"
+                          >
+                            @@include("src/img/svg/bio-hazard.svg")
+                          </div>
+                        </div>
+                        <div
+                          class="b-island__content l-fs-21px l-ml-16 l-ml-24@lg"
+                        >
+                          Токсические методы управления капиталом ОТСУТСТВУЮТ
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-7@lg">
+                  <section class="b-section">
+                    <div class="container l-pl-0@lg l-pr-40@lg l-pr-50@xl">
+                      <div class="b-section__header">
+                        <div class="b-section__wrapper">
+                          <div
+                            class="row align-items-center justify-content-between@md"
+                          >
+                            <div class="col-3@md">
+                              <h3
+                                class="b-section__header-title l-text-center l-text-left@md l-fs-32px l-fs-24px@md l-fs-30px@xl"
+                              >
+                                Высокая прибыль
+                              </h3>
+                            </div>
+                            <div
+                              class="col-9@md d-none d-flex@md justify-content-end@md"
+                            >
+                              <a
+                                href="http://bit.ly/39TUfw2"
+                                target="_blank"
+                                class="b-button b-button--blue l-w-220px@md"
+                                >мониторинг</a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="b-section__content">
+                        <a href="/img/high-profit@2x.png" class="mfp-image">
+                          <img
+                            src="/img/high-profit.png"
+                            srcset="/img/high-profit@2x.png 2x"
+                            alt=""
+                            class="img--never-think img-fluid d-block l-mx-auto l-mx-0@lg l-w-100% l-w-auto@lg"
+                          />
+                        </a>
+                        <div class="d-none@md l-mx-auto">
+                          <a
+                            href="http://bit.ly/39TUfw2"
+                            target="_blank"
+                            class="b-button b-button--blue b-button--fullwidth l-mt-24 "
+                            >мониторинг</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+                <div class="col-5@lg l-mt-48 l-mt-0@lg">
+                  <section class="b-section">
+                    <div class="container l-px-0@lg">
+                      <div class="b-section__header">
+                        <div class="b-section__wrapper">
+                          <div
+                            class="d-flex align-items-center@md justify-content-center justify-content-between@lg"
+                          >
+                            <h3
+                              class="b-section__header-title l-text-center l-text-left@lg l-fs-32px l-fs-24px@md l-fs-30px@xl"
+                            >
+                              Стабильная доходность <br />
+                              за 12 месяцев
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="b-section__content">
+                        <a
+                          href="/img/stable-yearly-yield@2x.png"
+                          class="mfp-image"
+                        >
+                          <img
+                            src="/img/stable-yearly-yield.png"
+                            srcset="/img/stable-yearly-yield@2x.png 2x"
+                            alt=""
+                            class="img--never-think img-fluid d-block l-mx-auto l-w-100% l-w-auto@lg"
+                        /></a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+
+              <div class="row l-mt-48">
+                <div class="col d-flex l-mb-16">
+                  <div class="b-island">
+                    <div
+                      class="b-island__inner l-h-100% d-flex flex-row align-items-center"
+                    >
+                      <div class="b-island__icon">
+                        <div
+                          class="icon icon--fill l-mx-auto l-text-dodger-blue"
+                        >
+                          @@include("src/img/svg/coin-bonus.svg")
+                        </div>
+                      </div>
+                      <div
+                        class="b-island__content l-fs-21px l-ml-16 l-ml-24@lg"
+                      >
+                        Прибыль более 500 %. МАХ просадка – 17 %
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-flex l-mb-16">
+                  <div class="b-island">
+                    <div
+                      class="b-island__inner l-h-100% d-flex flex-row align-items-center l-pr-16 l-pr-24@md"
+                    >
+                      <div class="b-island__icon">
+                        <div
+                          class="icon icon--fill l-mx-auto l-text-dodger-blue"
+                        >
+                          @@include("src/img/svg/chart-money.svg")
+                        </div>
+                      </div>
+                      <div
+                        class="b-island__content l-fs-21px l-ml-16 l-ml-24@lg"
+                      >
+                        Заработано более <br />
+                        3 000 пунктов
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col d-flex l-mb-16">
+                  <div class="b-island">
+                    <div
+                      class="b-island__inner l-h-100% d-flex flex-row align-items-center"
+                    >
+                      <div class="b-island__icon">
+                        <div
+                          class="icon icon--fill l-mx-auto l-text-dodger-blue"
+                        >
+                          @@include("src/img/svg/percents-coin.svg")
+                        </div>
+                      </div>
+                      <div
+                        class="b-island__content l-fs-21px l-ml-16 l-ml-24@lg"
+                      >
+                        Количество успешных сделок
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="b-section b-section--why-nox">
+        <div class="container">
+          <div class="b-section__content">
+            <div class="row">
+              <div class="col-12 l-mb-16 l-mb-24@lg">
+                <div class="b-island">
+                  <div class="b-island__inner l-px-40@lg l-py-64@lg">
+                    <div class="b-island__content l-text-center l-text-left@lg">
+                      <div class="row">
+                        <div class="col-4@lg">
+                          <h3 class="l-fs-44px@lg">Почему NOX?</h3>
+                        </div>
+                        <div class="col-8@lg l-px-0 l-px-8@md">
+                          <div>
+                            <p
+                              class="l-mt-24 l-mt-0@lg l-fs-17px l-fs-20px@lg"
+                              id="why-nox-short"
+                            >
+                              Торговая стратегия NOX разработана программистами
+                              и профессиональными риск-менеджерами в тесном
+                              сотрудничестве с несколькими поставщиками
+                              ликвидности. Были созданы специальные шлюзы и
+                              протоколы, позволившие получить доступ к
+                              инфраструктуре, которую используют самые крупные
+                              игроки валютного рынка – банки. Разработано
+                              программное решение, позволяющее
+                              <span class="collapse__tridot">...</span>
+                            </p>
+                            <p
+                              id="why-nox-text"
+                              class=" l-fs-17px l-fs-20px@lg collapse-content d-none"
+                            >
+                              получать ликвидность выходного дня (на 2 ч раньше
+                              открытия классического рынка, доступного для
+                              торговли на других площадках, далее – Pre-market)
+                              для работы в терминале МТ 4. Заключены соглашения
+                              с рядом прайм-брокеров о поставке данной
+                              ликвидности.
+                              <br />
+                              <br />
+                              В данном временном интервале работы рынка
+                              (Pre-market) не участвуют Retail-игроки (клиенты
+                              брокеров) и большинство самих брокеров. На нем
+                              производятся крупные обменные операции между
+                              основными институциональными игроками: банками и
+                              поставщиками ликвидности. Вследствие этого
+                              Pre-market менее ликвиден и менее изменчив, чем
+                              Retail-рынок (операции между банками проводятся по
+                              одному и тому же протоколу в течение многих лет).
+                              Это позволило использовать повторяющиеся движения
+                              цен инструментов для извлечения прибыли.
+                              <br />
+                              <br />
+                              Стратегия была протестирована ретроспективно на
+                              истории Pre-market с 1999 года (в этом году
+                              появились первые онлайн-платформы для торговли и,
+                              как следствие, история котировок инструментов), а
+                              также на реальном рынке с 2017 года.
+                              <br />
+                              <br />
+                              Работа стратегии на всем интервале торговли и
+                              исторического тестирования (с 1999 года) была
+                              абсолютно идентична и повторяема. Это является
+                              подтверждением неизменности алгоритма работы
+                              игроков (банков и поставщиков ликвидности) в
+                              период Pre-market. Как следствие, есть все
+                              основания полагать, что данная стратегия будет и
+                              дальше демонстрировать результаты, аналогичные
+                              прошлым.
+                            </p>
+                            <div>
+                              <button
+                                data-toggle="#why-nox-text"
+                                data-short="#why-nox-short"
+                                class="b-button b-button--link l-mt-16 l-mt-4@lg js-trigger-collapse"
+                              >
+                                <span class="b-trigger-collapse__is-collapsed">
+                                  Читать полностью
+                                </span>
+                                <span class="b-trigger-collapse__is-opened">
+                                  Свернуть
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6@md col-3@xl d-flex l-mb-16 why-nox-item">
+                <div class="b-island recursive">
+                  <div class="b-island__inner l-p-0">
+                    <div class="b-island__content">
+                      <div class="b-island">
+                        <div class="b-island__inner">
+                          <div class="b-island__content">
+                            <div class="b-island__icon">
+                              <div class="icon icon--fill">
+                                @@include("src/img/svg/union.svg")
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="l-pt-16 l-px-24 l-pb-24">
+                        Уникальный <br />
+                        алгоритм
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6@md col-3@xl d-flex l-mb-16 why-nox-item">
+                <div class="b-island recursive">
+                  <div class="b-island__inner l-p-0">
+                    <div class="b-island__content">
+                      <div class="b-island">
+                        <div class="b-island__inner">
+                          <div class="b-island__content">
+                            <div class="b-island__icon">
+                              <div class="icon icon--fill">
+                                @@include("src/img/svg/bank-liquidity.svg")
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="l-pt-16 l-px-24 l-pb-24">
+                        Банковская <br />
+                        ликвидность
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6@md col-3@xl d-flex l-mb-16 why-nox-item">
+                <div class="b-island recursive">
+                  <div class="b-island__inner l-p-0">
+                    <div class="b-island__content">
+                      <div class="b-island">
+                        <div class="b-island__inner">
+                          <div class="b-island__content">
+                            <div class="b-island__icon">
+                              <div class="icon icon--fill">
+                                @@include("src/img/svg/pro-development.svg")
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="l-pt-16 l-px-24 l-pb-24">
+                        PRO- <br />разработка
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6@md col-3@xl d-flex l-mb-16 why-nox-item">
+                <div class="b-island recursive">
+                  <div class="b-island__inner l-p-0">
+                    <div class="b-island__content">
+                      <div class="b-island">
+                        <div class="b-island__inner">
+                          <div class="b-island__content">
+                            <div class="b-island__icon">
+                              <div class="icon icon--fill">
+                                @@include("src/img/svg/money-shield.svg")
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="l-pt-16 l-px-24 l-pb-24">
+                        PRO-управление <br />
+                        рисками
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="why-nox__attention l-mt-16 l-mt-24@lg l-fs-32px@md l-text-dark-jungle l-text-center l-text-bold"
+            >
+              NOX имеет ограничения по торговому объему и является эксклюзивным
+              инвестиционным продуктом с ограниченным предложением.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="b-section b-section--form">
+        <div class="container">
+          <div class="b-section__content">
+            <div class="info-block l-mx-auto l-text-center l-fs-32px@lg">
+              Заполните форму и
+              <span class="l-text-dodger-blue">получите полное описание</span>
+              торговой стратегии NOX, а также
+              <span class="l-text-dodger-blue"
+                >ссылку на онлайн-мониторинг</span
+              >
+              торговли по эксклюзивной стратегии.
+            </div>
+            <div class="form-wrapper l-mt-24 l-mt-32@lg">
+              <form action="" class="form" id="request-form">
+                <div class="l-mb-16">
+                  <label for="name">
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Имя"
+                    />
+                  </label>
+                </div>
+                <div class="l-mb-16">
+                  <label for="email">
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="ivan@gmail.com"
+                    />
+                  </label>
+                </div>
+                <div class="l-mb-8">
+                  <label for="phone">
+                    <input
+                      type="phone"
+                      id="phone"
+                      name="phone"
+                      placeholder="Телефон"
+                    />
+                  </label>
+                </div>
+                <div class="l-fs-15px">Используйте латинские буквы</div>
+                <button
+                  type="submit"
+                  class="b-button b-button--blue b-button--big b-button--fullwidth b-button--shadowed l-mt-24"
+                >
+                  Получить
+                </button>
+              </form>
+            </div>
+            <div
+              class="form-message l-mx-auto l-mt-68 d-none"
+              id="request-form-message"
+            >
+              <div style="width: 96px;" class="l-mx-auto">
+                @@include("src/img/svg/hand-lined.svg")
+              </div>
+              <p class="l-text-white l-text-center l-mt-32">
+                Спасибо! <br />
+                На Вашу почту мы отправили письмо с описанием стратегии NOX и
+                ссылкой на онлайн-мониторинг.
+              </p>
+            </div>
+            <div class="how-work">
+              <h2 class="l-text-center">Как работает NOX?</h2>
+              <p
+                class="l-mt-16 l-fs-17px l-text-center how-work__text l-mx-auto"
+              >
+                Сделки NOX отправляются крупнейшим поставщикам ликвидности через
+                агрегатор с помощью специализированного функционала для
+                исполнения сделок в период Pre-market, разработанного NeverThink
+              </p>
+              <div class="row how-work__list l-mt-24 l-mt-40@xl">
+                <div class="col-2@xl d-flex justify-content-center">
+                  <div class="how-work__item">
+                    <div class="how-work__icon">
+                      @@include("src/img/svg/algoritm.svg")
+                    </div>
+                    <div class="how-work__title">Алгоритм NOX</div>
+                  </div>
+                </div>
+                <div class="col-2@xl d-flex justify-content-center">
+                  <div class="how-work__item">
+                    <div class="how-work__icon">
+                      @@include("src/img/svg/arrow-ltr.svg")
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4@xl d-flex justify-content-center">
+                  <div class="how-work__item">
+                    <div class="how-work__icon">
+                      @@include("src/img/svg/never-think-multi.svg")
+                    </div>
+                    <div class="how-work__title">Агрегатор ликвидности</div>
+                  </div>
+                </div>
+                <div class="col-2@xl d-flex justify-content-center">
+                  <div class="how-work__item">
+                    <div class="how-work__icon">
+                      @@include("src/img/svg/arrow-both.svg")
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2@xl d-flex justify-content-center">
+                  <div class="how-work__item">
+                    <div class="how-work__icon">
+                      @@include("src/img/svg/providers.svg")
+                    </div>
+                    <div class="how-work__title">Поставщики ликвидности</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include("src/views/partials/footer.html")
+      @@include("src/views/partials/mobile-menu.html")
+    </main>
+    <script src="/js/vendor.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>

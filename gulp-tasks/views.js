@@ -22,6 +22,7 @@ gulp.task("views", () => {
         )
         .pipe(gulpif(production, replace(".css", ".min.css")))
         .pipe(gulpif(production, replace(".js", ".min.js")))
+        .pipe(gulpif(production, replace(".min.json", ".json")))
         .pipe(gulp.dest(paths.views.dist))
         .pipe(browsersync.stream());
 });
